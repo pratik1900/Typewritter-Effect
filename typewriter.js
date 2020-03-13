@@ -1,6 +1,6 @@
-const typedElement = document.getElementById('typedWord');
+const typedElement = document.getElementById('typedWord');  //place a span with id "typedWord" where you want the text to appear
 console.log(typedElement);
-const keywords = ['Developer', 'Gamer', 'Geek'];    //Stuff you want to print
+const keywords = ['Developer', 'Gamer', 'Geek'];    //Keywords that you want to print
 let len = 0;
 
 async function init() {
@@ -10,13 +10,13 @@ async function init() {
 async function type(keyword, len){
 
     //initial wait
-    await new Promise(r => setTimeout(r, 1000));    //interval before typing the next word
+    await new Promise(r => setTimeout(r, 1000));    //sleep implementation - interval before typing the next word
 
     //FORWARD PRINT
     while (len<=keyword.length){
         printOneLetter(keyword, len);
         len++;
-        await new Promise(r => setTimeout(r, 150)); //sleep implementation - speed of forward typing
+        await new Promise(r => setTimeout(r, 150)); //speed of forward typing
     }
 
     //interval
