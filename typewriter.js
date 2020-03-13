@@ -1,5 +1,4 @@
 const typedElement = document.getElementById('typedWord');  //place a span with id "typedWord" where you want the text to appear
-console.log(typedElement);
 const keywords = ['Developer', 'Gamer', 'Geek'];    //Keywords that you want to print
 let len = 0;
 
